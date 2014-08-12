@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Amazon/Amazon.iml" filepath="$PROJECT_DIR$/Amazon/Amazon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Automation-Framework.iml" filepath="$PROJECT_DIR$/Automation-Framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BOA/BOA.iml" filepath="$PROJECT_DIR$/BOA/BOA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generic/Generic.iml" filepath="$PROJECT_DIR$/Generic/Generic.iml" />
+    </modules>
+  </component>
+</project>
+
