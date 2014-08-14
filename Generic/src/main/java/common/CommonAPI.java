@@ -48,7 +48,6 @@ public enum SelectorType {
                 element= driver.findElement(By.xpath(selectorValue));
                 break;
             case CSS:
-                System.out.println("by css");
                 element=driver.findElement(By.cssSelector(selectorValue));
                 break;
             case CLASSNAME:

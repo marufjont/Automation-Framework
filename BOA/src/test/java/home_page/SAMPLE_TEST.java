@@ -13,11 +13,7 @@ public class SAMPLE_TEST extends CommonAPI{
 
     @Test
     public void mainTest() {
-
-
-        driver.findElement(By.cssSelector("sds")).sendKeys("ssdsd");
-
-
+        getElement("#id", SelectorType.CSS).sendKeys("sdsds");
 
     }
 
