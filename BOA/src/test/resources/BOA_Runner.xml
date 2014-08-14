@@ -5,7 +5,10 @@
     <parameter name="browser" value="chrome"/>
     <test name="BOA App" parallel="test">
         <classes>
-            <class name="home_page.SAMPLE_TEST"/>
+            <!--<class name="home_page.SAMPLE_TEST"/>-->
+            <class name="home_page.SignInNegetiveTest"/>
+            <!--<class name="home_page.Search"/>-->
+            <!--<class name="home_page.Locationfinder"/>-->
         </classes>
     </test>
 </suite>
