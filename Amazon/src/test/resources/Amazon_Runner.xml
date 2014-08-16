@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Amazon Test Suite">
-    <test name="Amazon App" parallel="test">
+    <parameter name="url" value="http://www.amazon.com"/>
+    <parameter name="browser" value="firefox"/>
+    <test name="Amazon App">
         <classes>
-            <class name="amazon_home_page.Sample_Test"/>
-            <!--<class name=""/>-->
+            <!--<class name="test_cases.modular_tests.SignInTest"/>-->
+            <!--<class name="test_cases.modular_tests.SearchByDepartmentTest"/>-->
+            <!--<class name="test_cases.modular_tests.CheckOutTest"/>-->
+            <class name="test_cases.integration_test.MultipleFunctionsTest"/>
         </classes>
     </test>
 </suite>
+
