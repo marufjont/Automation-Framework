@@ -1,5 +1,6 @@
 package common;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +32,12 @@ public class CommonAPI {
         } else driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.navigate().to(url);
+        String expected = "As ffasdfa adfga";
+        String actual = "as fasdfasdfadf";
+        if (actual.startsWith(expected)) {
+
+        }
+
     }
 
 //    @AfterMethod
