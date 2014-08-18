@@ -102,4 +102,28 @@ public enum SelectorType {
         return elementList;
     }
 
+
+//    click
+        public  static void click(String selectorValue, SelectorType selectorType){
+            getElement(selectorValue,selectorType).click();
+        }
+//    type
+        public static  void type(String selectorValue, SelectorType selectorType, String characterSet){
+            getElement(selectorValue,selectorType).sendKeys(characterSet);
+
+        }
+        // clear
+     public static void clear(String seletorValue,SelectorType selectorType){
+         getElement(seletorValue,selectorType).clear();
+     }
+//    navigate
+//    select from drop down menu
+//    dynamic wait
+//    handle pop up window
+//    handle alert
+//    handle cookie
+//    up loading a file
+//    mouse hover
+//    enter keys
+//    Synchronization
 }
