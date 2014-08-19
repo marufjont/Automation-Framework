@@ -2,7 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Amazon Test Suite">
     <parameter name="url" value="http://www.amazon.com"/>
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
+
+    <!--<parameter name="userName" value="marufjont"/>-->
+    <!--<parameter name="key" value="889ce934-413c-43b1-8b1c-b5e9be5eb346"/>-->
+    <!--<parameter name="os" value="MAC"/>-->
+    <!--<parameter name="browserVersion" value="35"/>-->
+    <!--<parameter name="runSauce" value="true"/>-->
     <test name="Amazon App">
         <classes>
             <!--<class name="test_cases.modular_tests.SignInTest"/>-->

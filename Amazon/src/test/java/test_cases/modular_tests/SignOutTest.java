@@ -4,6 +4,8 @@ import common.CommonAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 import static actions.CheckSignedIn.checkSignedIn;
 import static actions.SignIn.signIn;
 import static actions.SignOut.signOut;
@@ -16,6 +18,7 @@ import static common.CommonAPI.getElement;
 public class SignOutTest extends CommonAPI {
     @Test
     public void signOutTest() {
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         // work in progress
 

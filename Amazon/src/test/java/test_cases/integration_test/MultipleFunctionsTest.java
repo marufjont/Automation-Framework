@@ -1,6 +1,7 @@
 package test_cases.integration_test;
 
 import common.CommonAPI;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page_factory.SearchObjects;
