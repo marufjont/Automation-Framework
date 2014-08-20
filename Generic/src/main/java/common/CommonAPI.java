@@ -1,16 +1,18 @@
 package common;
 
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -142,27 +144,104 @@ public enum SelectorType {
     }
 
 
-//    click
+
+    // click
         public  static void click(String selectorValue, SelectorType selectorType){
             getElement(selectorValue,selectorType).click();
         }
-//    type
+    //  type
         public static  void type(String selectorValue, SelectorType selectorType, String characterSet){
             getElement(selectorValue,selectorType).sendKeys(characterSet);
 
         }
         // clear
-     public static void clear(String seletorValue,SelectorType selectorType){
+    public static void clear(String seletorValue,SelectorType selectorType){
          getElement(seletorValue,selectorType).clear();
-     }
-//    navigate
-//    select from drop down menu
+    }
+        // submit
+        public static void submit(String seletorValue,SelectorType selectorType){
+            getElement(seletorValue,selectorType).submit();
+        }
+
+    //    navigate functions
+    public static void navigateTo(String url) {
+        driver.navigate().to(url);
+    }
+    public static void navigateForward() {
+        driver.navigate().forward();
+    }
+
+    public static void navigateBack() {
+        driver.navigate().back();
+   }
+
+    public static void refreshPage() {
+        driver.navigate().refresh();
+    }
+
+    //    select from drop down menu
 //    dynamic wait
-//    handle pop up window
+    public void waitUntilVisible(By by, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
+
+    public void waitUntilClickable(By by, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebElement element=wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
+    public void waintUntilSelectable(By by, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        boolean element = wait.until(ExpectedConditions.elementToBeSelected(by));
+    }
+
+    //    handle pop up window
 //    handle alert
-//    handle cookie
-//    up loading a file
+    public void okAlert() {
+        driver.switchTo().alert().accept();
+    }
+
+    public void dismissAlert() {
+        driver.switchTo().alert().dismiss();
+    }
+
+    //    handle cookie
+    public void deleteCookie(Cookie cookie) {
+        driver.manage().addCookie(cookie);
+    }
+
+    public void Cookie(Cookie cookie) {
+        driver.manage().addCookie(cookie);
+    }
+
+    public void deleteAllCookies() {
+        driver.manage().deleteAllCookies();
+    }
+
+    public void deleteCookieByName(String cookieName) {
+        driver.manage().deleteCookieNamed(cookieName);
+    }
+    public void getCookieByName(String cookieName) {
+        driver.manage().getCookieNamed(cookieName);
+    }
+
+    //    up loading a file
 //    mouse hover
+    public void mouseHover(WebElement element) {
+
+        Actions actions = new Actions(driver);
+        Action moveToElement = actions.moveToElement(element).build();
+        moveToElement.perform();
+    }
+    public void mouseHover(String selector, SelectorType selectorType) {
+        WebElement element = getElement(selector, selectorType);
+        Actions actions = new Actions(driver);
+        Action moveToElement = actions.moveToElement(element).build();
+        moveToElement.perform();
+    }
+
 //    enter keys
 //    Synchronization
+
 }

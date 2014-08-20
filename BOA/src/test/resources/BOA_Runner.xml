@@ -3,10 +3,10 @@
 <suite name="BOA Test Suite">
     <parameter name="url" value="http://www.bankofamerica.com"/>
     <parameter name="browser" value="chrome"/>
-    <test name="BOA App" parallel="test">
+    <test name="BOA App">
         <classes>
             <!--<class name="home_page.SAMPLE_TEST"/>-->
-            <class name="home_page.SignInNegetiveTest"/>
+            <!--<class name="home_page.SignInNegetiveTest"/>-->
             <!--<class name="home_page.Search"/>-->
             <!--<class name="home_page.Locationfinder"/>-->
         </classes>
